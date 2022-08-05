@@ -26,3 +26,5 @@ class Bank{
 const Ashish = new Bank(10)
 Ashish.Deposit_money(100)
 Ashish.Withdraw_money(200)
+const amountdiv = document.getElementById('amount')
+depositdiv.onclick = Ashish.Withdraw_money
