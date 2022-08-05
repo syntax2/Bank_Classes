@@ -3,33 +3,26 @@ const withdrawdiv = document.getElementById('withdraw')
 const balancediv = document.getElementById('balance')
 
 class Bank{
-   constructor(name,age){
-     this.Deposit = Deposit
-     this.name = name
-     this.Withdraw = Withdraw
-     this.Balance =  Balance
+   constructor(balance){
+     this.balance =  balance
    }
-   // Deposit_money(){
-    // const submit  =  depositdiv.innerText
-  //    return submit
-  //  }
-  // Withdraw_money(){
-    // const get = withdrawdiv.innerText
-  //   return get
-  // }
-  Final_balance(submit,get){
-    const submit  =  depositdiv.innerText
-    const get = withdrawdiv.innerText
-    console.log(submit)
-    // if (get > submit){
-    //   console.log('this is an error message')
-    // }
-    // else  {
-    //   money = balancediv.onclick(result => submit- get)
-    //   console.log(result)
-    //    }
+   Deposit_money(amount){
+    this.balance += amount
+     console.log('deposited',`$${amount}`)
+     console.log({balance: this.balance})
+   }
+  Withdraw_money(amount){
+    if (amount < this.balance){
+    this.balance -=amount
+    console.log('withdraw',`$${amount}`)
+    console.log({balance: this.balance})
+    }else{
+      console.log('you dont have enough money')
     }
   }
+ 
+  }
 
-
-const Ramesh = new Bank()
+const Ashish = new Bank(10)
+Ashish.Deposit_money(100)
+Ashish.Withdraw_money(200)
