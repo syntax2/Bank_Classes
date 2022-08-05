@@ -1,7 +1,3 @@
-const depositdiv = document.getElementById('deposit')
-const withdrawdiv = document.getElementById('withdraw')
-const balancediv = document.getElementById('balance')
-
 class Bank{
    constructor(balance){
      this.balance =  balance
@@ -23,8 +19,11 @@ class Bank{
  
   }
 
-const Ashish = new Bank(10)
-Ashish.Deposit_money(100)
-Ashish.Withdraw_money(200)
+// const Ashish = new Bank(10)
+// Ashish.Deposit_money(100)
+// Ashish.Withdraw_money(200)
+const depositdiv = document.getElementById('deposit')
+const withdrawdiv = document.getElementById('withdraw')
+const balancediv = document.getElementById('balance')
 const amountdiv = document.getElementById('amount')
-depositdiv.onclick = Ashish.Withdraw_money
+depositdiv.onclick = () => console.log('hi')
