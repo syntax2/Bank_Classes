@@ -19,11 +19,16 @@ class Bank{
  
   }
 
-// const Ashish = new Bank(10)
+const Ashish = new Bank(10)
 // Ashish.Deposit_money(100)
 // Ashish.Withdraw_money(200)
 const depositdiv = document.getElementById('deposit')
 const withdrawdiv = document.getElementById('withdraw')
 const balancediv = document.getElementById('balance')
 const amountdiv = document.getElementById('amount')
-depositdiv.onclick = () => console.log('hi')
+depositdiv.onclick = () => {
+  Ashish.Deposit_money(Number(amountdiv.value))
+withdrawdiv.onclick = () => {
+  Ashish.Withdraw_money(Number(amountdiv.value))
+}
+}
